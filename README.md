@@ -1,8 +1,15 @@
-Not just an Universal MediaCreationTool wrapper script with ingenious support for business editions,  
+# MediaCreationTool.bat
+
+> [!WARNING]
+> This is a Fork of https://github.com/AveYo/MediaCreationTool.bat.
+> 
+> All the credit for developing this tool goes to [AveYo](https://github.com/AveYo/).
+
+Not just an Universal MediaCreationTool wrapper script with ingenious support for business editions,
 <img src="preview.png">  
 A powerful yet simple windows 10 / 11 deployment automation tool as well!  
-*If you had no success launching the script so far, this latest version will work*  
-
+*If you had no success launching the script so far, this latest version will work* 
+ 
 Presets  
 -------  
 1 ***Auto Upgrade*** with detected media, script assists setupprep for upgrading directly  
@@ -69,7 +76,7 @@ Changelog
 _No need to right-click Run as Admin, script will ask itself. Directly saving the Raw files no longer breaks line endings_  
 _We did it! We broke [the previous gist](https://git.io/MediaCreationTool.bat)_ ;) So this is the new home. **Thank you all!**  
 
-[discuss on MDL](https://forums.mydigitallife.net/threads/universal-mediacreationtool-wrapper-script-create-windows-11-media-with-automatic-bypass.84168/)  
+[discuss on AveYo's MDL](https://forums.mydigitallife.net/threads/universal-mediacreationtool-wrapper-script-create-windows-11-media-with-automatic-bypass.84168/)  
 
 ```
 2018.10.10: reinstated 1809 [RS5]! using native xml patching for products.xml; fixed syntax bug with exit/b
@@ -125,4 +132,6 @@ _We did it! We broke [the previous gist](https://git.io/MediaCreationTool.bat)_ 
 2022.03.18: fix regression with Auto Upgrade; removed powershell -nop arg (issue #41); enhanced 11 AutoUnattend.xml
 2022.03.20: stable - all issues ironed out; improved script ui; upgrade keeping files from Eval editions too
             last squash I promise ;)
+2024.07.28: Update Links to download MCT files from my(Jettcodey) re-upload site due to broken original MS links for Windows 10 builds 17763 and below.
+
 ```
