@@ -1,7 +1,7 @@
 @goto latest at github.com/Jettcodey/MediaCreationTool.bat
 :Universal MCT wrapper script for all Windows 10/11 versions from 1507 to 23H2 by AveYo Updated by Jettcodey!
 :: !!! THIS IS A FORK OF https://github.com/AveYo/MediaCreationTool.bat !!!
-:: Nothing but the Original Microsoft-hosted files re-uploaded to mctfiles.de since the Original Microsoft-hosted source links-
+:: Nothing but the Original Microsoft-hosted files re-uploaded to mct-files.de since the Original Microsoft-hosted source links-
 :: - are not longer working for Windows 10 Builds 17763 and below; script just configures an xml and starts MCT
 :: Ingenious support for business editions (Enterprise / VL) selecting language, x86, x64 or AiO inside the MCT GUI
 :: Changelog: 2023.11.29 stable
@@ -146,84 +146,84 @@ goto choice-%MCT%
 
 :choice-17
 set "VER=22631" & set "VID=11_23H2" & set "CB=22631.2861.231204-0538.23H2_ni_release_svc_refresh" & set "CT=2023/12/" & set "CC=2.0"
-set "CAB=https://mctfiles.de/11-23H2/products_win11_20231208.cab"
-set "EXE=https://mctfiles.de/11-23H2/MediaCreationTool_Win11_23H2.exe"
+set "CAB=https://mct-files.de/11-23H2/products_win11_20231208.cab"
+set "EXE=https://mct-files.de/11-23H2/MediaCreationTool_Win11_23H2.exe"
 goto process ::# refreshed 22621 base with integrated 23H2 enablement package
 
 :choice-16
 set "VER=22621" & set "VID=11_22H2" & set "CB=22621.1702.230505-1222.ni_release_svc_refresh" & set "CT=2023/05/" & set "CC=2.0"
-set "CAB=https://mctfiles.de/11-22H2/products_win11_20230510.cab.cab"
-set "EXE=https://mctfiles.de/11-22H2/mediacreationtool.exe"
+set "CAB=https://mct-files.de/11-22H2/products_win11_20230510.cab.cab"
+set "EXE=https://mct-files.de/11-22H2/mediacreationtool.exe"
 goto process ::# windows 11 22H2
 
 :choice-15
 set "VER=22000" & set "VID=11_21H2" & set "CB=22000.318.211104-1236.co_release_svc_refresh" & set "CT=2021/11/" & set "CC=2.0"
-set "CAB=https://mctfiles.de/11-21H2/products_Win11_20211115.cab"
-set "EXE=https://mctfiles.de/11-21H2/MediaCreationToolW11.exe"
+set "CAB=https://mct-files.de/11-21H2/products_Win11_20211115.cab"
+set "EXE=https://mct-files.de/11-21H2/MediaCreationToolW11.exe"
 goto process ::# windows 11 : usability and ui downgrade, and even more ChrEdge bloat (but somewhat snappier multitasking)
 
 :choice-14
 set "VER=19045" & set "VID=22H2" & set "CB=19045.2965.230505-1139.22h2_release_svc_refresh" & set "CT=2023/05/" & set "CC=1.4.1"
-set "CAB=https://mctfiles.de/22H2/products_win10_20230510.cab.cab"
-set "EXE=https://mctfiles.de/22H2/MediaCreationTool22H2.exe"
+set "CAB=https://mct-files.de/22H2/products_win10_20230510.cab.cab"
+set "EXE=https://mct-files.de/22H2/MediaCreationTool22H2.exe"
 goto process ::# refreshed 19041 base with integrated 22H2 enablement package - current
 
 :choice-13
 set "VER=19044" & set "VID=21H2" & set "CB=19044.1288.211006-0501.21h2_release_svc_refresh" & set "CT=2021/11/" & set "CC=1.4.1"
-set "CAB=https://mctfiles.de/21H2/products_Win10_20211115.cab"
-set "EXE=https://mctfiles.de/21H2/MediaCreationTool21H2.exe"
+set "CAB=https://mct-files.de/21H2/products_Win10_20211115.cab"
+set "EXE=https://mct-files.de/21H2/MediaCreationTool21H2.exe"
 goto process ::# refreshed 19041 base with integrated 21H2 enablement package
 
 :choice-12
 set "VER=19043" & set "VID=21H1" & set "CB=19043.1288.211006-0459.21h1_release_svc_refresh" & set "CT=2021/10/" & set "CC=1.4.1"
 if %INSERT_BUSINESS%0 gtr 1 set "CB=19043.1348.211103-2252.21h1_release_svc_refresh" & set "CT=2021/11/"
-set "CAB=https://mctfiles.de/21H1/products_win10_20211029.cab"
-set "EXE=https://mctfiles.de/21H1/MediaCreationTool21H1.exe"
+set "CAB=https://mct-files.de/21H1/products_win10_20211029.cab"
+set "EXE=https://mct-files.de/21H1/MediaCreationTool21H1.exe"
 goto process ::# refreshed 19041 base with integrated 21H1 enablement package - newest (get this, then 19044 via WU ep of few kb)
 
 :choice-11
 set "VER=19042" & set "VID=20H2" & set "CB=19042.631.201119-0144.20h2_release_svc_refresh" & set "CT=2020/11/" & set "CC=1.4.1"
 if %INSERT_BUSINESS%0 gtr 1 set "CB=19042.1052.210606-1844.20h2_release_svc_refresh" & set "CT=2021/07/"
-set "CAB=https://mctfiles.de/20H2/products_20201119.cab"
-set "EXE=https://mctfiles.de/20H2/MediaCreationTool20H2.exe"
+set "CAB=https://mct-files.de/20H2/products_20201119.cab"
+set "EXE=https://mct-files.de/20H2/MediaCreationTool20H2.exe"
 goto process ::# refreshed 19041 base with integrated 20H2 enablement package to mainly bundle ChrEdge
 
 :choice-10
 set "VER=19041" & set "VID=20H1" & set "CB=19041.508.200907-0256.vb_release_svc_refresh" & set "CT=2020/09/" & set "CC=1.4"
 if %INSERT_BUSINESS%0 gtr 1 set "CB=19041.572.201009-1946.vb_release_svc_refresh" & set "CT=2020/11/"
-set "CAB=https://mctfiles.de/20H1/products.cab"
-set "EXE=https://mctfiles.de/20H1/MediaCreationTool2004.exe"
+set "CAB=https://mct-files.de/20H1/products.cab"
+set "EXE=https://mct-files.de/20H1/MediaCreationTool2004.exe"
 goto process ::# visible improvements to windows update, defender, search, dx12, wsl, sandbox
 
 :choice-9
 set "VER=18363" & set "VID=19H2" & set "CB=18363.592.200109-2016.19h2_release_svc_refresh" & set "CT=2020/01/" & set "CC=1.3"
 if %INSERT_BUSINESS%0 gtr 1 set "CB=18363.1139.201008-0514.19h2_release_svc_refresh" & set "CT=2020/11/"
-set "CAB=https://mctfiles.de/19H2/products_20200116.cab"
-set "EXE=https://mctfiles.de/19H2/MediaCreationTool1909.exe"
+set "CAB=https://mct-files.de/19H2/products_20200116.cab"
+set "EXE=https://mct-files.de/19H2/MediaCreationTool1909.exe"
 goto process ::# refreshed 18362 base with integrated 19H2 enablement package to activate usability and security fixes
 
 :choice-8
 set "VER=18362" & set "VID=19H1" & set "CB=18362.356.190909-1636.19h1_release_svc_refresh" & set "CT=2019/09/" & set "CC=1.3"
-set "CAB=https://mctfiles.de/19H1/products_20190912.cab"
-set "EXE=https://mctfiles.de/19H1/MediaCreationTool1903.exe"
+set "CAB=https://mct-files.de/19H1/products_20190912.cab"
+set "EXE=https://mct-files.de/19H1/MediaCreationTool1903.exe"
 goto process ::# modern windows 10 starts here with proper memory allocation, cpu scheduling, security features
 
 :choice-7
 set "VER=17763" & set "VID=1809" & set "CB=17763.379.190312-0539.rs5_release_svc_refresh" & set "CT=2019/03/" & set "CC=1.3"
-set "CAB=https://mctfiles.de/1809/products_20190314.cab"
-set "EXE=https://mctfiles.de/1809/MediaCreationTool1809.exe"
+set "CAB=https://mct-files.de/1809/products_20190314.cab"
+set "EXE=https://mct-files.de/1809/MediaCreationTool1809.exe"
 goto process ::# rather mediocre considering it is the base for ltsc 2019; less smooth than 1803 in games; intel pre-4th-gen buggy
 
 :choice-6
 set "VER=17134" & set "VID=1803" & set "CB=17134.112.180619-1212.rs4_release_svc_refresh" & set "CT=2018/07/" & set "CC=1.2"
-set "CAB=https://mctfiles.de/1803/products_20180705.cab"
-set "EXE=https://mctfiles.de/1803/MediaCreationTool1803.exe"
+set "CAB=https://mct-files.de/1803/products_20180705.cab"
+set "EXE=https://mct-files.de/1803/MediaCreationTool1803.exe"
 goto process ::# update available to finally fix most standby memory issues that were present since 1703; intel pre-4th-gen buggy
 
 :choice-5
 set "VER=16299" & set "VID=1709" & set "CB=16299.125.171213-1220.rs3_release_svc_refresh" & set "CT=2018/01/" & set "CC=1.1"
-set "CAB=https://mctfiles.de/1709/products_20180105.cab"
-set "EXE=https://mctfiles.de/1709/MediaCreationTool.exe"
+set "CAB=https://mct-files.de/1709/products_20180105.cab"
+set "EXE=https://mct-files.de/1709/MediaCreationTool.exe"
 goto process ::# plagued by standby and other memory allocation bugs, fullscreen optimization issues, worst windows 10 ver by far
 
 :choice-4
@@ -231,29 +231,29 @@ set "VER=15063" & set "VID=1703" & set "CB=15063.0.170317-1834.rs2_release" & se
 if %INSERT_BUSINESS%0 gtr 1 set "CB=15063.0.170710-1358.rs2_release_svc_refresh" & set "CT=2017/07/"
 rem set "XML=https://download.microsoft.com/download/2/E/B/2EBE3F9E-46F6-4DB8-9C84-659F7CCEDED1/products20170727.xml"
 rem above refreshed xml often fails decrypting dual x86 + x64 - using rtm instead; the added enterprise + cloud are refreshed
-set "CAB=https://mctfiles.de/1703/products_20170317.cab"
-set "EXE=https://mctfiles.de/1703/MediaCreationTool.exe"
+set "CAB=https://mct-files.de/1703/products_20170317.cab"
+set "EXE=https://mct-files.de/1703/MediaCreationTool.exe"
 goto process ::# some gamers still find it the best despite unfixed memory allocation bugs and exposed cpu flaws; can select Cloud
 
 :choice-3
 set "VER=14393" & set "VID=1607" & set "CB=14393.0.161119-1705.rs1_refresh" & set "CT=2017/01/" & set "CC=1.0"
-set "CAB=https://mctfiles.de/1607/Products_20170116.cab"
-set "EXE=https://mctfiles.de/1607/MediaCreationTool.exe"
+set "CAB=https://mct-files.de/1607/Products_20170116.cab"
+set "EXE=https://mct-files.de/1607/MediaCreationTool.exe"
 goto process ::# snappy and stable for legacy hardware (but with excruciantly slow windows update process)
 
 :choice-2
 set "VER=10586" & set "VID=1511" & set "CB=10586.0.160426-1409.th2_refresh" & set "CT=2016/05/" & set "CC=1.0"
-set "XML=https://mctfiles.de/1511/Products05242016.xml"
-set "EXE=https://mctfiles.de/1511/MediaCreationTool.exe"
+set "XML=https://mct-files.de/1511/Products05242016.xml"
+set "EXE=https://mct-files.de/1511/MediaCreationTool.exe"
 rem 1511 MCT exe works and can select Education - using 1607 one instead anyway for unified products.xml catalog 1.0 format
 set "EXE=https://download.microsoft.com/download/C/F/9/CF9862F9-3D22-4811-99E7-68CE3327DAE6/MediaCreationTool.exe"
 goto process ::# most would rather go with 1507 or 1607 instead, with little effort can apply latest ltsb updates on all editions
 
 :choice-1
 set "VER=10240" & set "VID=1507" & set "CB=10240.16393.150909-1450.th1_refresh" & set "CT=2015/09/" & set "CC=1.0"
-set "XML=https://mctfiles.de/1507/Products09232015_2.xml"
-set "EXE=https://mctfiles.de/1507/MediaCreationToolx64.exe"
-set "EXE32=https://mctfiles.de/1507/MediaCreationTool.exe"
+set "XML=https://mct-files.de/1507/Products09232015_2.xml"
+set "EXE=https://mct-files.de/1507/MediaCreationToolx64.exe"
+set "EXE32=https://mct-files.de/1507/MediaCreationTool.exe"
 if /i "%PROCESSOR_ARCHITECTURE%" equ "x86" if not defined PROCESSOR_ARCHITEW6432 set "EXE=%EXE32%"
 rem 1507 MCT exe works but cant select Education - using 1607 one instead anyway for unified products.xml catalog 1.0 format
 set "EXE=https://download.microsoft.com/download/C/F/9/CF9862F9-3D22-4811-99E7-68CE3327DAE6/MediaCreationTool.exe"
