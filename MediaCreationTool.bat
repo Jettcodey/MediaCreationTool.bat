@@ -1,16 +1,16 @@
 @goto latest at github.com/Jettcodey/MediaCreationTool.bat
-:Universal MCT wrapper script for all Windows 10/11 versions from 1507 to 23H2 by AveYo Updated by Jettcodey!
+:Universal MCT wrapper script for all Windows 10/11 versions from 1507 to 24H2 by AveYo Updated by Jettcodey!
 :: !!! THIS IS A FORK OF https://github.com/AveYo/MediaCreationTool.bat !!!
 :: Nothing but the Original Microsoft-hosted files re-uploaded to mct-files.de since the Original Microsoft-hosted source links-
 :: - are not longer working for Windows 10 Builds 17763 and below; script just configures an xml and starts MCT
 :: Ingenious support for business editions (Enterprise / VL) selecting language, x86, x64 or AiO inside the MCT GUI
-:: Changelog: 2023.11.29 stable
+:: Changelog: 2024.10.19 stable
 :: - all issues ironed out; upgrade keeping files from Eval editions too; pickup $ISO$ dir content to add on media
 :: - DU in 11: auto installs 22000.556 atm; older skip_11_checks, without Server label; Home offline local account
-:: on upgrade: latest build, on offline install: 11 23H2 22631.2861 / 11 22H2 22621.1702 / 11 21H2 22000.318 / 22H2 19045.2965 / 21H2 19044.1288 / 21H1 19043.1348 / 20H2 19042.1052
+:: on upgrade: latest build, on offline install: 11 24H2 26100.2033 / 11 23H2 22631.2861 / 11 22H2 22621.1702 / 11 21H2 22000.318 / 22H2 19045.3803 / 21H2 19044.1288 / 21H1 19043.1348 / 20H2 19042.1052
 
-::# uncomment to skip GUI dialog for MCT choice: 1507 to 11 23H2 - or rename script: "23H2 MediaCreationTool.bat"
-rem set MCT=2310
+::# uncomment to skip GUI dialog for MCT choice: 1507 to 11 24H2 - or rename script: "24H2 MediaCreationTool.bat"
+rem set MCT=2409
 
 ::# uncomment to start auto upgrade setup directly (no prompts) - or rename script: "auto 11 MediaCreationTool.bat"
 rem set /a AUTO=1
@@ -46,11 +46,11 @@ set OPTIONS=%OPTIONS% /Telemetry Disable /CompactOS Disable
 ::# comment to not unhide Enterprise for 1709+ in products.xml
 set /a UNHIDE_BUSINESS=1
 
-::# comment to not insert Enterprise esd links for 1607,1703 or update links for 1909,2004,20H2,21H2,22H2,11_21H2,11_22H2,11_23H2 in products.xml
+::# comment to not insert Enterprise esd links for 1607,1703 or update links for 1909,2004,20H2,21H2,22H2,11_21H2,11_22H2,11_23H2,11_24H2 in products.xml
 set /a INSERT_BUSINESS=1
 
-::# MCT Version choice dialog items and default-index [11_23H2]
-set VERSIONS=1507,1511,1607,1703,1709,1803,1809,1903,1909,20H1,20H2,21H1,21H2,22H2,11_21H2,11_22H2,11_23H2
+::# MCT Version choice dialog items and default-index [11_24H2]
+set VERSIONS=1507,1511,1607,1703,1709,1803,1809,1903,1909,20H1,20H2,21H1,21H2,22H2,11_21H2,11_22H2,11_23H2,11_24H2
 set /a dV=17
 
 ::# MCT Preset choice dialog items and default-index [Select in MCT]
@@ -144,6 +144,12 @@ if %MCT%0 gtr 1 if %PRE%0 lss 1 call :choices PRE "%PRESETS%"  %dP% "MCT Preset"
 if %MCT%0 gtr 1 if %PRE%0 lss 1 goto choice-0 = cancel
 goto choice-%MCT%
 
+:choice-18
+set "VER=26100" & set "VID=11_24H2" & set "CB=26100.2033.241004-2336.ge_release_svc_refresh" & set "CT=2024/10/" & set "CC=2.0"
+set "CAB=https://mct-files.de/11-24H2/products-Win11-20241004.cab"
+set "EXE=https://mct-files.de/11-24H2/mediacreationtool.exe"
+goto process ::# windows 11 24H2
+
 :choice-17
 set "VER=22631" & set "VID=11_23H2" & set "CB=22631.2861.231204-0538.23H2_ni_release_svc_refresh" & set "CT=2023/12/" & set "CC=2.0"
 set "CAB=https://mct-files.de/11-23H2/products_win11_20231208.cab"
@@ -163,8 +169,8 @@ set "EXE=https://mct-files.de/11-21H2/MediaCreationToolW11.exe"
 goto process ::# windows 11 : usability and ui downgrade, and even more ChrEdge bloat (but somewhat snappier multitasking)
 
 :choice-14
-set "VER=19045" & set "VID=22H2" & set "CB=19045.2965.230505-1139.22h2_release_svc_refresh" & set "CT=2023/05/" & set "CC=1.4.1"
-set "CAB=https://mct-files.de/22H2/products_win10_20230510.cab.cab"
+set "VER=19045" & set "VID=22H2" & set "CB=19045.3803.231204-0204.22h2_release_svc_refresh" & set "CT=2023/12/" & set "CC=1.4.1"
+set "CAB=https://mct-files.de/22H2/products.cab"
 set "EXE=https://mct-files.de/22H2/MediaCreationTool22H2.exe"
 goto process ::# refreshed 19041 base with integrated 22H2 enablement package - current
 
@@ -246,17 +252,17 @@ set "VER=10586" & set "VID=1511" & set "CB=10586.0.160426-1409.th2_refresh" & se
 set "XML=https://mct-files.de/1511/Products05242016.xml"
 set "EXE=https://mct-files.de/1511/MediaCreationTool.exe"
 rem 1511 MCT exe works and can select Education - using 1607 one instead anyway for unified products.xml catalog 1.0 format
-set "EXE=https://download.microsoft.com/download/C/F/9/CF9862F9-3D22-4811-99E7-68CE3327DAE6/MediaCreationTool.exe"
+set "EXE=https://mct-files.de/1511/MediaCreationTool_.exe"
 goto process ::# most would rather go with 1507 or 1607 instead, with little effort can apply latest ltsb updates on all editions
 
 :choice-1
 set "VER=10240" & set "VID=1507" & set "CB=10240.16393.150909-1450.th1_refresh" & set "CT=2015/09/" & set "CC=1.0"
 set "XML=https://mct-files.de/1507/Products09232015_2.xml"
 set "EXE=https://mct-files.de/1507/MediaCreationToolx64.exe"
-set "EXE32=https://mct-files.de/1507/MediaCreationTool.exe"
+set "EXE32=https://mct-files.de/1507/MediaCreationToolx86.exe"
 if /i "%PROCESSOR_ARCHITECTURE%" equ "x86" if not defined PROCESSOR_ARCHITEW6432 set "EXE=%EXE32%"
 rem 1507 MCT exe works but cant select Education - using 1607 one instead anyway for unified products.xml catalog 1.0 format
-set "EXE=https://download.microsoft.com/download/C/F/9/CF9862F9-3D22-4811-99E7-68CE3327DAE6/MediaCreationTool.exe"
+set "EXE=https://mct-files.de/1507/MediaCreationTool.exe"
 goto process ::# fastest for potato PCs (but with excruciantly slow windows update process)
 
 :choice- ;( something happened (broken environment/powershell?) and should cancel, but continue with defaults instead
@@ -364,6 +370,7 @@ if %VER% geq 22000 (set MEDIA_ARCH=x64& if defined ARCH set ARCH=x64)
 if %VER% geq 22000 (set X=11& set VIS=21H2) else (set X=10& set VIS=%VID%)
 if %VER% geq 22621 (set X=11& set VIS=22H2)
 if %VER% geq 22631 (set X=11& set VIS=23H2)
+if %VER% geq 26100 (set X=11& set VIS=24H2)
 
 ::# refresh screen
 cls & <"%~f0" (set /p _=&for /l %%s in (1,1,20) do set _=& set/p _=& call echo;%%_%%)
@@ -1009,7 +1016,7 @@ function PRODUCTS_XML { [xml]$xml = [io.file]::ReadAllText("$pwd\products.xml",[
      }}}
    }
  }
-#:: update existing FilePath entries for 1909, 2004, 2008 and insert entries for 21H2, 22H2, 11_21H2, 11_22H2 and 11_23H2
+#:: update existing FilePath entries for 1909, 2004, 2008 and insert entries for 21H2, 22H2, 11_21H2, 11_22H2, 11_23H2 and 11_24H2
  if ($insert -and $ver -gt 15063) {
    $items = $csv |group Client,Lang -AsHashTable -AsString
    if ($null -ne $items) {
