@@ -134,5 +134,7 @@ _We did it! We broke [the previous gist](https://git.io/MediaCreationTool.bat)_ 
             last squash I promise ;)
 2024.07.28: Update Links to download MCT files from my(Jettcodey) re-upload site due to
             broken original MS links for Windows 10 builds 17763 and below.
+2024.10.19: fix 2 more download links, Add 11_24H2 Update, Fix xml files for Windows 10 1507/1511
+            
 
 ```
