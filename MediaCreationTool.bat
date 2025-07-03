@@ -4,10 +4,10 @@
 :: Nothing but the Original Microsoft-hosted files re-uploaded to mct-files.de since the Original Microsoft-hosted source links-
 :: - are not longer working for Windows 10 Builds 17763 and below; script just configures an xml and starts MCT
 :: Ingenious support for business editions (Enterprise / VL) selecting language, x86, x64 or AiO inside the MCT GUI
-:: Changelog: 2024.10.19 stable
+:: Changelog: 2025.07.03 stable
 :: - all issues ironed out; upgrade keeping files from Eval editions too; pickup $ISO$ dir content to add on media
 :: - DU in 11: auto installs 22000.556 atm; older skip_11_checks, without Server label; Home offline local account
-:: on upgrade: latest build, on offline install: 11 24H2 26100.2033 / 11 23H2 22631.2861 / 11 22H2 22621.1702 / 11 21H2 22000.318 / 22H2 19045.3803 / 21H2 19044.1288 / 21H1 19043.1348 / 20H2 19042.1052
+:: on upgrade: latest build, on offline install: 11 24H2 26100.4349 / 11 23H2 22631.2861 / 11 22H2 22621.1702 / 11 21H2 22000.318 / 22H2 19045.3803 / 21H2 19044.1288 / 21H1 19043.1348 / 20H2 19042.1052
 
 ::# uncomment to skip GUI dialog for MCT choice: 1507 to 11 24H2 - or rename script: "24H2 MediaCreationTool.bat"
 rem set MCT=2409
@@ -145,8 +145,8 @@ if %MCT%0 gtr 1 if %PRE%0 lss 1 goto choice-0 = cancel
 goto choice-%MCT%
 
 :choice-18
-set "VER=26100" & set "VID=11_24H2" & set "CB=26100.2033.241004-2336.ge_release_svc_refresh" & set "CT=2024/10/" & set "CC=2.0"
-set "CAB=https://mct-files.de/11-24H2/products-Win11-20241004.cab"
+set "VER=26100" & set "VID=11_24H2" & set "CB=26100.4349.250607-1500.ge_release_svc_refresh" & set "CT=2025/06/" & set "CC=2.0"
+set "CAB=https://mct-files.de/11-24H2/products-Win11-24H2-6B.cab"
 set "EXE=https://mct-files.de/11-24H2/mediacreationtool.exe"
 goto process ::# windows 11 24H2
 
