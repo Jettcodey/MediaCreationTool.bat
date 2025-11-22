@@ -146,7 +146,7 @@ goto choice-%MCT%
 
 :choice-18
 set "VER=26100" & set "VID=11_24H2" & set "CB=26100.4349.250607-1500.ge_release_svc_refresh" & set "CT=2025/06/" & set "CC=2.0"
-set "CAB=https://mct-files.de/11-24H2/products-Win11-24H2-6B.cab"
+set "CAB=https://mct-files.de/11-24H2/Products-Win11-24H2-6B.cab"
 set "EXE=https://mct-files.de/11-24H2/mediacreationtool.exe"
 goto process ::# windows 11 24H2
 
@@ -1484,3 +1484,4 @@ function PRODUCTS_XML { [xml]$xml = [io.file]::ReadAllText("$pwd\products.xml",[
 ::#,19043,vol,uk-ua,3633073140,2601657108,d3d06977ed2de7352489317563099c80093125cd,c5a6725fc7b6e5e58d680259ab827de6621f919f,d,d
 ::#,19043,vol,zh-cn,3885377254,2847833439,d6cc640b4cbc484e5d41cc966b3e105193c18ffd,dcdcfca5a388059e2db9cb55e950f29282bec529,d,c
 ::#,19043,vol,zh-tw,3856202777,2825194480,fac5d12d42d7aa7bbcad36b1314923a776e1a5c9,ae7a1a1d9212269227330c5298687887a1f5621d,d,d
+
