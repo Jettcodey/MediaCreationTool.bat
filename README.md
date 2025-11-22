@@ -138,5 +138,7 @@ _We did it! We broke [the previous gist](https://git.io/MediaCreationTool.bat)_ 
             broken original MS links for Windows 10 builds 17763 and below.
 2024.10.19: fix 2 more download links, Add 11_24H2 Update, Fix xml files for Windows 10 1507/1511
 2025.07.03: Update Windows 11 24H2 from 26100.2033 to 26100.4349
+2025.11.22: Fixed Link for Windows 11 24H2 .cab file (25H2 Coming Soon)
 
 ```
+
