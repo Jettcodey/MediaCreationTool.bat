@@ -1,10 +1,8 @@
 # MediaCreationTool.bat
 
 > [!NOTE]
-> This is a Fork of https://github.com/AveYo/MediaCreationTool.bat.
-> 
-> All the credit for developing this tool goes to [AveYo](https://github.com/AveYo/).
->
+> This is a Fork of https://github.com/AveYo/MediaCreationTool.bat.\
+> All the credit for developing this tool goes to [AveYo](https://github.com/AveYo/).\
 > I’m Updating/Hosting this independently from the original repo.
 
 Not just an Universal MediaCreationTool wrapper script with ingenious support for business editions,
